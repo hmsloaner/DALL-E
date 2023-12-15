@@ -6,3 +6,4 @@ pytest
 requests
 torch
 torchvision
+security~=1.2.0
