@@ -4,7 +4,7 @@ import torch.nn as nn
 from security import safe_requests
 
 def load_model(path: str, device: torch.device = None) -> nn.Module:
-    if path.startswith('http://') or path.startswith('https://'):
+    if path.startswith(('http://', 'https://')):
         resp = safe_requests.get(path)
         resp.raise_for_status()
             
